@@ -9,10 +9,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class Practice06Test {
     private Klass klass;
 
-//    @BeforeEach
-//    public void setup() {
-//        klass = new Klass(2);
-//    }
+    @BeforeEach
+    public void setup() {
+        klass = new Klass(2);
+    }
 
     @Test
     public void should_person_have_name_and_age() throws Exception {
@@ -28,10 +28,10 @@ public class Practice06Test {
         assertThat(introduce).isEqualTo("My name is Tom. I am 21 years old.");
     }
 
-//    @Test
-//    public void should_class_have_a_number() throws Exception {
-//        assertThat(klass.getNumber()).isEqualTo(2);
-//    }
+    @Test
+    public void should_class_have_a_number() throws Exception {
+        assertThat(klass.getNumber()).isEqualTo(2);
+    }
 //
 //    @Test
 //    public void should_class_get_display_name() throws Exception {
