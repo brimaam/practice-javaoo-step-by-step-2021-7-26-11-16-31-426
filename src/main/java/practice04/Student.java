@@ -20,4 +20,10 @@ public class Student extends Person{
         this.klass = klass;
     }
 
+
+    @Override
+    public String introduce() {
+        return "My name is " + super.getName() + ". I am " + super.getAge() + " years old. I am a Student. I am at Class " + this.klass +".";
+    }
+
 }
