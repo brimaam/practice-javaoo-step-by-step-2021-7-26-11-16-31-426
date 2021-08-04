@@ -47,12 +47,11 @@ public class Practice05Test {
         assertThat(tom.introduce()).isEqualTo("My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2.");
     }
 
-//    @Test
-//    public void should_teacher_introduce_itself_with_no_class_teaching() throws Exception {
-//        Teacher tom = new Teacher("Tom", 21);
-//        assertThat(tom.introduce()).isEqualTo("My name is Tom. I am 21 years old. I am a Teacher. I teach No Class.");
-//    }
+    @Test
+    public void should_teacher_introduce_itself_with_no_class_teaching() throws Exception {
+        Teacher tom = new Teacher("Tom", 21);
+        assertThat(tom.introduce()).isEqualTo("My name is Tom. I am 21 years old. I am a Teacher. I teach No Class.");
+    }
 
-    //String.format("My name is %s. I am %d years old.", name, age);
-    //return MessageFormat.format("My name is {0}. I am {1} years old.", name, age);
+
 }
