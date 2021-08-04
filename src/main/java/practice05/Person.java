@@ -16,4 +16,7 @@ public class Person {
         return age;
     }
 
+    public String introduce() {
+        return "My name is " + this.name + ". I am " + this.age + " years old.";
+    }
 }
