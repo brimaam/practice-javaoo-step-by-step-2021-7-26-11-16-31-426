@@ -2,7 +2,7 @@ package practice06;
 
 public class Teacher extends Person {
     private Klass klassObject;
-    private final String intro = super.introduce() + " I am a Teacher. I teach";
+    private final String intro = super.introduce() + " I am a Teacher. I ";
 
     public Teacher(String name, int age, Klass klass) {
         super(name, age);
@@ -21,13 +21,17 @@ public class Teacher extends Person {
     public String introduce() {
 
         if (this.klassObject == null){
-            return this.intro + " No Class.";
+            return this.intro + "teach No Class.";
         }
-        return this.intro + " Class " + this.klassObject.getNumber() +".";
+        return this.intro + "teach Class " + this.klassObject.getNumber() +".";
     }
 
     public String introduceWith(Student student){
-        return this.intro + " Jerry.";
+        if(this.klassObject.getNumber() != student.getKlass().getNumber()){
+            return this.intro + "don't teach " + student.getName() + ".";
+        }
+        return this.intro + "teach " + student.getName() + ".";
+
     }
 
 
