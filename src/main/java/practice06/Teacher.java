@@ -15,4 +15,15 @@ public class Teacher extends Person {
     public Klass getKlass() {
         return klassObject;
     }
+
+    @Override
+    public String introduce() {
+        String intro = super.introduce() + " I am a Teacher. I teach";
+
+        if (this.klassObject.getNumber() == 0){
+            return intro + " No Class.";
+        }
+        return intro + " Class " + this.klassObject.getNumber() +".";
+
+    }
 }
