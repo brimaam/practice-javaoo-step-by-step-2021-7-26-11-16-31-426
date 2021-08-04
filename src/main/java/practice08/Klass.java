@@ -3,7 +3,7 @@ package practice08;
 
 public class Klass {
     private final int  number;
-    private static Student leader;
+    private  Student leader;
 
     public Klass(int number) {
         this.number = number;
@@ -18,12 +18,10 @@ public class Klass {
     }
 
     public void assignLeader(Student student) {
-        if(student.getKlass().getLeader().getName() != leader.getName()){
-            System.out.print("It is not one of us.\n");
-        }
-        else {
-            System.out.print("It is not one of us.\n");
+        if (student.isMembership()){
             leader = student;
+        } else {
+            System.out.print("It is not one of us.\n");
         }
     }
 
@@ -33,7 +31,7 @@ public class Klass {
     }
 
     public void appendMember(Student student) {
-        leader = student;
+        student.setMembership(true);
     }
 
 
