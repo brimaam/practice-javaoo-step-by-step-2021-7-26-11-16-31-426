@@ -20,7 +20,6 @@ public class Teacher extends Person{
 
     @Override
     public String introduce() {
-
         if (this.klassObject == null){
             return this.intro + "teach No Class.";
         }
@@ -28,10 +27,9 @@ public class Teacher extends Person{
     }
 
     public String introduceWith(Student student){
-        if(this.klassObject.getNumber() != student.getKlass().getNumber()){
-            return this.intro + "don't teach " + student.getName() + ".";
+        if(klassObject.equals(student.getKlass())){
+            return this.intro + "teach " + student.getName() + ".";
         }
-        return this.intro + "teach " + student.getName() + ".";
-
+        return this.intro + "don't teach " + student.getName() + ".";
     }
 }

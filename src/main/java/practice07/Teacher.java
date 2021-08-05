@@ -31,6 +31,4 @@ public class Teacher extends Person{
         }
         return this.intro + "don't teach " + student.getName() + ".";
     }
-
-
 }
