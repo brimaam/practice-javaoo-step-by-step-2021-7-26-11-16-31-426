@@ -1,5 +1,7 @@
 package practice09;
 
+import java.util.Objects;
+
 public class Klass {
     private final int  number;
     private Student leader;
@@ -35,5 +37,19 @@ public class Klass {
     public boolean isIn(){
         return true;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Klass klass = (Klass) o;
+        return number == klass.number;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(number);
+    }
+
 
 }

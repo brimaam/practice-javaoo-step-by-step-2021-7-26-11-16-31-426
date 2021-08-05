@@ -19,7 +19,6 @@ public class Teacher extends Person {
 
     @Override
     public String introduce() {
-
         if (this.klassObject == null){
             return this.intro + "teach No Class.";
         }
@@ -31,7 +30,6 @@ public class Teacher extends Person {
             return this.intro + "teach " + student.getName() + ".";
         }
         return this.intro + "don't teach " + student.getName() + ".";
-
     }
 
 }

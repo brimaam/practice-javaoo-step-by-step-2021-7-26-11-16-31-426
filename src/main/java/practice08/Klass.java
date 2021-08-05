@@ -1,6 +1,8 @@
 package practice08;
 
 
+import java.util.Objects;
+
 public class Klass {
     private final int  number;
     private  Student leader;
@@ -32,6 +34,19 @@ public class Klass {
 
     public void appendMember(Student student) {
         student.setMembership(true);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Klass klass = (Klass) o;
+        return number == klass.number;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(number);
     }
 
 
