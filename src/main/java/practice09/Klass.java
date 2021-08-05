@@ -3,8 +3,9 @@ package practice09;
 import java.util.Objects;
 
 public class Klass {
-    private final int  number;
+    private final int number;
     private Student leader;
+    private Student klassMember;
 
     public Klass(int number) {
         this.number = number;
@@ -19,7 +20,7 @@ public class Klass {
     }
 
     public void assignLeader(Student student) {
-        if (student.isMembership()){
+        if (klassMember != null){
             leader = student;
         } else {
             System.out.print("It is not one of us.\n");
@@ -32,10 +33,7 @@ public class Klass {
     }
 
     public void appendMember(Student student) {
-        student.setMembership(true);
-    }
-    public boolean isIn(){
-        return true;
+        klassMember = student;
     }
 
     @Override

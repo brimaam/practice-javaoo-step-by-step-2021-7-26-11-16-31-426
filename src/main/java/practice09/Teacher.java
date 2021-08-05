@@ -42,7 +42,6 @@ public class Teacher extends Person{
             total += klass.getNumber();
         }
 
-
         if(total != student.getKlass().getNumber()){
             return this.intro + "don't teach " + student.getName() + ".";
         }
@@ -51,8 +50,10 @@ public class Teacher extends Person{
     }
 
     public boolean isTeaching(Student student) {
-        if(student.getKlass().getNumber() == 2){
-            return student.getKlass().isIn();
+        for (Klass klass: this.classes){
+            if(student.getKlass().equals(klass) ){
+                return true;
+            }
         }
         return false;
     }
